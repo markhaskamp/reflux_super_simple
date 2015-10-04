@@ -1,7 +1,9 @@
 
 var Hello = React.createClass({
   render: function() {
-    return React.createElement("div", null, "Hello ", this.props.name);
+    return (
+      <div>Hello, {this.props.name}</div>
+      )
   }
 });
 
