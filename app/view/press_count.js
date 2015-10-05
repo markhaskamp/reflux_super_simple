@@ -15,7 +15,7 @@ var PressCount = React.createClass({
 
   handleClick: function() {
     console.log('PressCount. handleClick()');
-    incrementAction();
+    incrementAction({val: 1});
   },
 
   handleReset: function() {

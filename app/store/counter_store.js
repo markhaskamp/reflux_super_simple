@@ -8,9 +8,10 @@ var CounterStore = Reflux.createStore({
     this.listenTo(incrementAction, this.increment);
   },
 
-  increment: function(n) {
+  increment: function(j) {
     console.log('CounterStore. increment()');
-    this.currentCount += 1;
+    this.currentCount += j.val;
+    console.log(this.currentCount);
 
     this.trigger();
   }
