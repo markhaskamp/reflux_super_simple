@@ -1,12 +1,10 @@
+// var incrementAction = Reflux.createAction(null);
 
 var PressCount = React.createClass({
-  getInitialState: function() {
-    return {pressCount: 0};
-  },
 
   render: function() {
     return (
-      <div>Pressed {this.state.pressCount} times
+      <div>Pressed  times
         <div>
           <button onClick={this.handleClick}>+1</button>
           <button onClick={this.handleReset}>reset</button>
@@ -16,11 +14,12 @@ var PressCount = React.createClass({
   },
 
   handleClick: function() {
-    this.setState({pressCount: this.state.pressCount + 1});
+    console.log('PressCount. handleClick()');
+    incrementAction();
   },
 
   handleReset: function() {
-    this.setState({pressCount: 0});
+    console.log('PressCount. handleReset()');
   }
 
 });

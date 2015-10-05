@@ -9,7 +9,7 @@ var CounterStore = Reflux.createStore({
   },
 
   increment: function(n) {
-    console.log('got to here');
+    console.log('CounterStore. increment()');
     this.currentCount += 1;
 
     this.trigger();
