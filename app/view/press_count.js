@@ -2,16 +2,19 @@
 
 var PressCount = React.createClass({
 
-  mixins: [Reflux.listenTo(CounterStore, 'foo')],
+  mixins: [Reflux.listenTo(CounterStore, 'increment')],
 
-  foo: function() {
-    console.log('PressCount.foo()');
+  increment: function(x) {
+    this.setState({pressCount: this.state.pressCount += 1});
   },
 
+  getInitialState: function() {
+    return { pressCount: 0 };
+  },
 
   render: function() {
     return (
-      <div>Pressed  times
+      <div>Pressed {this.state.pressCount} times
         <div>
           <button onClick={this.handleClick}>+1</button>
           <button onClick={this.handleReset}>reset</button>
