@@ -2,6 +2,13 @@
 
 var PressCount = React.createClass({
 
+  mixins: [Reflux.listenTo(CounterStore, 'foo')],
+
+  foo: function() {
+    console.log('PressCount.foo()');
+  },
+
+
   render: function() {
     return (
       <div>Pressed  times
@@ -14,12 +21,11 @@ var PressCount = React.createClass({
   },
 
   handleClick: function() {
-    console.log('PressCount. handleClick()');
     incrementAction({val: 1});
   },
 
   handleReset: function() {
-    console.log('PressCount. handleReset()');
+    resetAction();
   }
 
 });
