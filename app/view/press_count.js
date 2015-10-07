@@ -6,9 +6,9 @@ var PressCount = React.createClass({
     Reflux.listenTo(CounterStore, 'increment')
   ],
 
-  increment: function(x) {
+  increment: function(state) {
     console.log('increment');
-    this.setState(x);
+    this.setState(state);
   },
 
   getInitialState: function() {
