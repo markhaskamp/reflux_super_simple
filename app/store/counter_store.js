@@ -9,15 +9,15 @@ var CounterStore = Reflux.createStore({
     this.listenTo(resetAction, this.reset);
   },
 
-  increment: function(j) {
-    this.currentCount += j.val;
+  increment: function() {
+    this.currentCount += 1;
     this.trigger({pressCount: this.currentCount});
   },
 
-    reset: function() {
-      this.currentCount = 0;
-      this.trigger({pressCount: 0});
-    }
+  reset: function() {
+    this.currentCount = 0;
+    this.trigger({pressCount: 0});
+  }
 
 });
 

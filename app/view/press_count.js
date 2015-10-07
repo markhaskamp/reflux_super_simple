@@ -17,6 +17,7 @@ var PressCount = React.createClass({
 
   render: function() {
     return (
+
       <div>Pressed {this.state.pressCount} times
         <div>
           <button onClick={this.handleClick}>+1</button>
@@ -27,7 +28,7 @@ var PressCount = React.createClass({
   },
 
   handleClick: function() {
-    incrementAction({val: 1});
+    incrementAction();
   },
 
   handleReset: function() {
