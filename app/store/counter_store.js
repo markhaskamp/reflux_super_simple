@@ -11,12 +11,12 @@ var CounterStore = Reflux.createStore({
 
   increment: function(j) {
     this.currentCount += j.val;
-    this.trigger(this.currentCount);
+    this.trigger({pressCount: this.currentCount});
   },
 
     reset: function() {
       this.currentCount = 0;
-      this.trigger();
+      this.trigger({pressCount: 0});
     }
 
 });
