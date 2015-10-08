@@ -7,7 +7,6 @@ var F2C = React.createClass({
   ],
 
   convert: function(state) {
-    console.log('F2C. onConvert');
     this.setState(state);
   },
 
@@ -28,7 +27,6 @@ var F2C = React.createClass({
 
   handleConvert: function() {
     var f = $('#fahrenheitVal').val();
-    console.log(f);
     convertAction(f);
   }
 });
