@@ -27,8 +27,9 @@ var F2C = React.createClass({
   },
 
   handleConvert: function() {
-    console.log('F2C. handleConvert');
-    convertAction(100);
+    var f = $('#fahrenheitVal').val();
+    console.log(f);
+    convertAction(f);
   }
 });
 
