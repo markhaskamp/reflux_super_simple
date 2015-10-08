@@ -7,7 +7,6 @@ var PressCount = React.createClass({
   ],
 
   increment: function(state) {
-    console.log('increment');
     this.setState(state);
   },
 
